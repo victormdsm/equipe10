@@ -1,1 +1,1 @@
-# equipe10
+Sistema Fictício de Contabilidade Visão Geral: O sistema de contabilidade tem como objetivo auxiliar empresas e profissionais contábeis na gestão eficiente de suas finanças, permitindo o registro de transações, geração de relatórios financeiros e cumprimento das obrigações fiscais.
