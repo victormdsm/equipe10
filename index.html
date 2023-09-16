@@ -1,250 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="views/css/style.css" rel="stylesheet" />
+  <title>Login page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="./index2.html">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+<body class="corpo">
+  <main>
+  
+    <section class="d-flex justify-content-center align-items-center fundo">
+      
+      <div class="">
+        <img src="assets/mamonha big.png"  alt="...">
+      </div>
+
+      <div class="d-flex" style="height: 300px;">
+        <div class="vr"></div>
+      </div>
+      
+      <div class="ms-5 cor">
+        
+        <form class="border rounded-3">
+          <div class="m-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
-        </div>
-      </nav>
-      <div class="login-dark" style="height: 695px;">
-        <form>
-            <h2 class="sr-only">Login Form</h2>
-            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+          <div class="m-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            
+          </div>
+          <div class="w-100 m-1">
+            <button type="button" class="btn cor rounded-3 border-0" data-bs-toggle="modal" data-bs-target="#modal-1">
+              Esqueci minha senha!
+            </button>
+          </div>
+          <div class="m-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Lembre minha senha</label>
+          </div>
+          <div class="container ">
+            <button type="submit" class="btn bt-cor w-100 p-3 mt-3 py-3 mb-3">Login</button>
+          </div>
+        </form>
+      </div> 
+    </section>
+  </main> 
+
+  <footer class="text-center ">
+    <section class="cor-footer p-4 pb-0">
+      <div class="mb-3 ">
+      <a class="cor-icone btn" href="#!"><i class="bi bi-whatsapp"></i></a>
+      <a class="cor-icone btn" href="#!"><i class="bi bi-instagram"></i></a>
+      <a class="cor-icone btn" href="#!"><i class="bi bi-twitter"></i></i></a>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <!-- Footer -->
-<footer class="text-center text-lg-start bg-dark text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-  
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Mamonha's System
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
-            <p><i class="fas fa-home me-3"></i> Foz do iguaçu, PR 88888-888, BR</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              mamonhasys@hotmail.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 55 4599999999</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
+    <div class="p-3">2023 <i class="bi bi-c-circle"></i> Desenvolvido por Mamonhac | Sistema Contábil. </div>
+    <div class="p-0"><img src="data:image/jpeg;base64,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"> </div>  
+  </section>
+
+  <!-- MODAL 1 -->
+  <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Recuperar Senha</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <!-- Grid row -->
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="emailenvio" class="form-label">Digite seu Email:</label>
+            <input type="email" class="form-control" id="emailenvio" placeholder="nome@example.com">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar email</button>
+          
+        </div>
       </div>
-    </section>
-    <!-- Section: Links  -->
-  
-  </footer>
-  <!-- Footer -->
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-<style>
-    .login-dark {
-  height: 1000px;
-  background-size: cover;
-  position: relative;
-  border-radius: 1000px;
-}
-
-.login-dark form {
-  max-width: 320px;
-  width: 90%;
-  background-color: #1e2833;
-  padding: 40px;
-  border-radius: 4px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
-}
-
-.login-dark .illustration {
-  text-align: center;
-  padding: 15px 0 20px;
-  font-size: 100px;
-  color: #2980ef;
-}
-
-.login-dark form .form-control {
-  background: none;
-  border: none;
-  border-bottom: 1px solid #434a52;
-  border-radius: 0;
-  box-shadow: none;
-  outline: none;
-  color: inherit;
-}
-
-.login-dark form .btn-primary {
-  background: #214a80;
-  border: none;
-  border-radius: 4px;
-  padding: 11px;
-  box-shadow: none;
-  margin-top: 26px;
-  text-shadow: none;
-  outline: none;
-}
-
-.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
-  background: #214a80;
-  outline: none;
-}
-
-.login-dark form .forgot {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  color: #6f7a85;
-  opacity: 0.9;
-  text-decoration: none;
-}
-
-.login-dark form .forgot:hover, .login-dark form .forgot:active {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.login-dark form .btn-primary:active {
-  transform: translateY(1px);
-}
-</style>
 </html>
