@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@200&family=Roboto:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+    font-weight: bolder;
+}
+
+nav{
+    background: #08243B;
+    height: 80px;
+    width: 100%;
+}
+
+.logo-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+label.logo {
+    color: white;
+    font-size: 22px;
+    line-height: 80px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+select{
+    font-family: montserrat;
+    font-weight: bolder;
+}
+
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color:white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius:3px ;
+    text-transform: uppercase;
+}
+a.active, a:hover{
+    background: #C79360 ;
+    transition: .5s;
+    border-radius: 15px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width: 952px){
+    label.logo{
+        font-size: 22px;
+        padding-left: 30;
+    }
+    nav ul li a{
+        font-size : 16px;
+    }
+}
+
+@media(max-width: 768px){
+    .checkbtn{
+        display:block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;  
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 5;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    select {
+        font-size: 20px;
+        font-family: montserrat;
+        font-weight: bold;
+        margin-left: 17px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #C79360;
+    }
+   #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.img {
+    width: 90px;
+    padding-left: 7px;
+    vertical-align: middle;
+}
+
+.language-selector {
+    color: white;
+    margin-right: 20px;
+}
+
+.language-selector select {
+    padding: 5px;
+    border-radius: 3px;
+    background: #08243B;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
