@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Lato:wght@300&family=Montserrat:wght@200&family=Poppins:wght@200;800&family=Roboto:wght@100&display=swap');
+
+*{
+    text-decoration: none !important;
+}
+
+section {
+    position: relative;
+    text-align: center;
+    min-height: calc(100vh - 80px);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.background-image {
+    background-image: url(https://ajcontabil.com.br/wp-content/uploads/2018/02/banner2.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+}
+
+/* Estilos para o título */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px; 
+    color: white;
+    font-size: calc(1em + 2.5vw);
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2;
+    width: auto;
+}
+
+.background-image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #08243B;
+    mix-blend-mode: overlay; 
+}
+
+.vantagens {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    background-color: white;
+}
+
+.vantagem {
+    padding: 60px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #C79360;
+}
+
+.vantagem img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.vantagem h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.vantagem p {
+    font-size: 14px;
+}
+
+.subtitle{
+    font-size: calc(1em + 1vw);
+    font-family: Poppins;
+    position: absolute;
+    color: white;
+    font-weight: 200;
+    font-style: bold;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+    .vantagem {
+        margin: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vantagem:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+.title-slogan{
+    font-weight: 200;
+    font-family: Barlow;
+    font-size: 22px;
+    color:#C79360;
+    background-color: rgba(243, 0, 109, 0);
+    font-style: normal;
+    letter-spacing: 2px;
+    font-style: bold;
+    filter: contrast(2);
+    margin-top: 0;
+}
+.main-title{
+    font-weight: 700;
+    font-family: Poppins;
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(243, 0, 109, 0);
+    font-style: normal;
+    margin-top: 0;
+}
+h3{
+    color: #08243B;
+    text-decoration: solid;
+}
+
+.title-slogan p {
+    margin-bottom: -10px;
+}
+
+.slogan-points{
+    font-weight: 200;
+    font-family: Barlow;
+    font-size: 22px;
+    color: #C79360;
+    letter-spacing: 2px;
+    font-style: normal;
+    filter: contrast(2);
+}
+.slogan-points p{
+    margin-bottom: -10px;
+}
+
+table{
+    height: 70px;
+}
+
+.cel-1{
+    color:white;
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.btn-cadastro {
+    font-size: 22px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #C79360;
+    filter: contrast(1.5);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 100px;
+    width: 440px;
+    height: 63px;
+    font-family: Arial;
+    font-weight: 400;
+    line-height:26px;
+}
+
+.btn-cadastro:hover {
+    background-color: #5E6F7C;
+}
+
+.table:first-of-type {
+    margin-bottom: -50px;
+}
