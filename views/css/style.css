@@ -2,6 +2,23 @@
     height: 100vh;
 }
 
+
 .bt-cor {
-    background-color: #999999!important;
+    background-color: #C79360!important;
+}
+
+.ancora {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footerpage {
+    background-color: #5E6F7C;
+}
+
+.borda {
+    border-style: solid;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #C79360;
 }
