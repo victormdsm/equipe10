@@ -1,0 +1,13 @@
+.lixo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+    margin-right: 22px;
+}
+
+.editar {
+    display: flex;
+    justify-content: end;
+    margin-top: -16px;
+    margin-right: auto;
+}
