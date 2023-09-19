@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gráficos</title>
+    <!-- Inclua as folhas de estilo do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Gráficos</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="icmsChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <canvas id="pinsCofinsChart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="insumosAgricolasChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <canvas id="impostoImportacaoChinaChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclua os scripts do Bootstrap e do Chart.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Código JavaScript para criar os gráficos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Gráfico de aumento do ICMS no Brasil
+            var icmsChart = new Chart(document.getElementById('icmsChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'Aumento do ICMS (%)',
+                        data: [3, 4, 5], // Dados fictícios
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de PINs e COFINS
+            var pinsCofinsChart = new Chart(document.getElementById('pinsCofinsChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'PINs e COFINS (%)',
+                        data: [2.5, 3.2, 3.8], // Dados fictícios
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de aumento dos insumos agrícolas
+            var insumosAgricolasChart = new Chart(document.getElementById('insumosAgricolasChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'Aumento dos Insumos Agrícolas (%)',
+                        data: [8, 10, 12], // Dados fictícios
+                        backgroundColor: 'rgba(255, 205, 86, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de imposto de importação da China
+            var impostoImportacaoChinaChart = new Chart(document.getElementById('impostoImportacaoChinaChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'Imposto de Importação da China (%)',
+                        data: [10, 12, 15], // Dados fictícios
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
