@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+    <link href="views/css/sidebar.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="views/css/navbar-style.css">
+    <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="dashboard.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="cad-user.html" class="nav-link px-0 "> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
+                                </li>
+                                <li>
+                                    <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span> </a>
+                                </li>
+                                <li>
+                                    <a href="gerenciar-empresas.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
+                                </li>
+                                <li>
+                                    <a href="cadastrar-empresa.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">mamonha</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="container">
+                    <h1>Gráficos</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <canvas id="icmsChart"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <canvas id="pinsCofinsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <canvas id="insumosAgricolasChart"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <canvas id="impostoImportacaoChinaChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Gráfico de aumento do ICMS no Brasil
+            var icmsChart = new Chart(document.getElementById('icmsChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'Aumento do ICMS (%)',
+                        data: [3, 4, 5], // Dados fictícios
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de PINs e COFINS
+            var pinsCofinsChart = new Chart(document.getElementById('pinsCofinsChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'PINs e COFINS (%)',
+                        data: [2.5, 3.2, 3.8], // Dados fictícios
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de aumento dos insumos agrícolas
+            var insumosAgricolasChart = new Chart(document.getElementById('insumosAgricolasChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'Aumento dos Insumos Agrícolas (%)',
+                        data: [8, 10, 12], // Dados fictícios
+                        backgroundColor: 'rgba(255, 205, 86, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de imposto de importação da China
+            var impostoImportacaoChinaChart = new Chart(document.getElementById('impostoImportacaoChinaChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ano 1', 'Ano 2', 'Ano 3'],
+                    datasets: [{
+                        label: 'Imposto de Importação da China (%)',
+                        data: [10, 12, 15], // Dados fictícios
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+
+</html>
