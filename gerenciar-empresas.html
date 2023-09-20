@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+    <link href="views/css/sidebar.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="views/css/navbar-style.css">
+    <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="dashboard.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="cad-user.html" class="nav-link px-0 "> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
+                                </li>
+                                <li>
+                                    <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
+                                </li>
+                            </ul>
+                        </li>   
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span> </a>
+                                </li>
+                                <li>
+                                    <a href="gerenciar-empresas.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
+                                </li>
+                                <li>
+                                    <a href="cadastrar-empresa.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">mamonha</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="page-header">
+                    <h4 class="page-title">Empresas Cadastradas</h4>
+                    <hr>
+                    <div class="table-responsive">
+                        <div id="add-row_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="dataTables_length" id="add-row_length"><label>Show <select
+                                                name="add-row_length" aria-controls="add-row"
+                                                class="form-control form-control-sm">
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select> entries</label></div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 d-flex justify-content-end   ">
+                                    <div id="add-row_filter" class="dataTables_filter">
+                                        <label>Search:<input type="search" class="form-control form-control-sm"
+                                                placeholder="CNPJ" aria-controls="add-row"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="add-row" class="display table table-striped table-hover dataTable"
+                                        role="grid" aria-describedby="add-row_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="add-row" rowspan="1"
+                                                    colspan="1" aria-sort="ascending"
+                                                    aria-label="Name: activate to sort column descending"
+                                                    style="width: 181.688px;">Nome</th>
+                                                <th class="sorting" tabindex="0" aria-controls="add-row" rowspan="1"
+                                                    colspan="1" aria-label="Position: activate to sort column ascending"
+                                                    style="width: 267px;">CNPJ</th>
+                                                <th class="sorting" tabindex="0" aria-controls="add-row" rowspan="1"
+                                                    colspan="1" aria-label="Office: activate to sort column ascending"
+                                                    style="width: 141.031px;">Telefone</th>
+                                                <th style="width: 126.281px;" class="sorting" tabindex="0"
+                                                    aria-controls="add-row" rowspan="1" colspan="1"
+                                                    aria-label="Action: activate to sort column ascending">Ação
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">Empresa 1</td>
+                                                <td>00.000.000.0000-00</td>
+                                                <td>(00) 00000-0000</td>
+                                                <td>
+                                                    <div class="form-button-action">
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-primary btn-lg"
+                                                            data-original-title="Edit Task" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-2">
+                                                            <i class="fa bi-pencil-square"></i>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-danger" data-original-title="Remove"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-1">
+                                                            <i class="fa bi-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td class="sorting_1">Empresa 2</td>
+                                                <td>00.000.000.0000-00</td>
+                                                <td>(00) 00000-0000</td>
+                                                <td>
+                                                    <div class="form-button-action">
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-primary btn-lg"
+                                                            data-original-title="Edit Task" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-2">
+                                                            <i class="fa bi-pencil-square"></i>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-danger" data-original-title="Remove"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-1">
+                                                            <i class="fa bi-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">Empresa 3</td>
+                                                <td>00.000.000.0000-00</td>
+                                                <td>(00) 00000-0000</td>
+                                                <td>
+                                                    <div class="form-button-action">
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-primary btn-lg"
+                                                            data-original-title="Edit Task" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-2">
+                                                            <i class="fa bi-pencil-square"></i>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-danger" data-original-title="Remove"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-1">
+                                                            <i class="fa bi-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td class="sorting_1">Empresa 4</td>
+                                                <td>00.000.000.0000-00</td>
+                                                <td>(00) 00000-0000</td>
+                                                <td>
+                                                    <div class="form-button-action">
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-primary btn-lg"
+                                                            data-original-title="Edit Task" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-2">
+                                                            <i class="fa bi-pencil-square"></i>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-danger" data-original-title="Remove"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-1">
+                                                            <i class="fa bi-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">Empresa 5</td>
+                                                <td>00.000.000.0000-00</td>
+                                                <td>(00) 00000-0000</td>
+                                                <td>
+                                                    <div class="form-button-action">
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-primary btn-lg"
+                                                            data-original-title="Edit Task" data-bs-toggle="modal"
+                                                            data-bs-target="#modal-2">
+                                                            <i class="fa bi-pencil-square"></i>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" title=""
+                                                            class="btn btn-link btn-danger" data-original-title="Remove"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-1">
+                                                            <i class="fa bi-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <div class="dataTables_info" id="add-row_info" role="status" aria-live="polite">
+                                        Showing 1 to 5 of 10 entries</div>
+                                </div>
+                                <div class="col-sm-12 col-md-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="add-row_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous disabled"
+                                                id="add-row_previous"><a href="#" aria-controls="add-row"
+                                                    data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li>
+                                            <li class="paginate_button page-item active"><a href="#"
+                                                    aria-controls="add-row" data-dt-idx="1" tabindex="0"
+                                                    class="page-link">1</a></li>
+                                            <li class="paginate_button page-item "><a href="#" aria-controls="add-row"
+                                                    data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                            <li class="paginate_button page-item next" id="add-row_next"><a href="#"
+                                                    aria-controls="add-row" data-dt-idx="3" tabindex="0"
+                                                    class="page-link">Proximo</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
