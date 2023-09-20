@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </div>
-                    <button id="openModalButton" class="btn-cadastro">SOLUCIONAR AGORA!</button>
+                    <button id="openModalButton" class="btn-cadastro">COMEÇAR AGORA</button>
                 </div>
             </section>
             <div id="contactModal" class="modal">
@@ -114,8 +114,8 @@
                         <div class="col-sm-6 d-none d-sm-block bg-image"></div>
                         <div class="col-sm-6 p-4">
                             <div class="text-center">
-                                <div class="h3 fw-light">Contact Form</div>
-                                <p class="mb-4 text-muted">Split layout contact form</p>
+                                <div class="h3 fw-light">Formulário de Contato</div>
+                                <p class="mb-4 text-muted">Digite suas informaçoes</p>
                             </div>
 
                             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
@@ -123,25 +123,27 @@
 
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-                                    <label for="name">Name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                    <label for="name">Nome</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">Digite um Nome.</div>
                                 </div>
-
 
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                    <label for="emailAddress">Email Address</label>
-                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                    <label for="emailAddress">Email</label>
+                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Digite um Email.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email invalido.</div>
                                 </div>
-
 
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-                                    <label for="message">Message</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                                    <input class="form-control" id="number" type="text" placeholder="(45) 454545-4545" data-sb-validations="required" />
+                                    <label for="name">Telefone</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">Digite um Nome.</div>
                                 </div>
-
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                                    <label for="message">Mensagem</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">.</div>
+                                </div>
 
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
@@ -157,16 +159,15 @@
 
 
                                 <div class="d-grid">
-                                    <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                                    <button class="btn submit btn-lg" id="submitButton" type="submit">Submit</button>
                                 </div>
                             </form>
 
 
                         </div>
                     </div>
-
                     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
+        </body>
 
 </html>
 <script>

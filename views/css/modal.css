@@ -28,3 +28,8 @@
     cursor: pointer;
   }
   
+  #submitButton{
+    background-color: #08243B;
+    color: white;
+    filter: contrast(1.2);
+  }
