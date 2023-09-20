@@ -21,7 +21,6 @@ section {
     min-height: calc(100vh - 80px);
 }
 
-/* Estilos para o título */
 .title {
     position: absolute;
     top: 50%;
@@ -141,6 +140,7 @@ h3{
     letter-spacing: 2px;
     font-style: normal;
     filter: contrast(2);
+    margin-bottom: 3.75em;
 }
 .slogan-points p{
     margin-bottom: -10px;
@@ -176,10 +176,42 @@ table{
     line-height:26px;
 }
 
+@media (max-width: 767px) {
+    .btn-cadastro{
+        width: 100%;
+    }
+}
+
 .btn-cadastro:hover {
     background-color: #5E6F7C;
 }
 
 .table:first-of-type {
     margin-bottom: -50px;
+}
+
+.container{
+    height: auto;
+}
+.cedula-azul span{
+    color:white;
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc(1em + 0.4vw);
+}
+
+.cedula-cinza span{
+    color:white;
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc(1em + 0.40vw);
+}
+
+.cedula-azul{
+    height: 5.375em;
+}
+.cedula-cinza{
+    height: 5.375em;
 }
