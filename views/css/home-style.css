@@ -168,11 +168,11 @@ table{
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 100px;
-    width: 440px;
+    margin-top: 70px;
+    width: 320px;
     height: 63px;
-    font-family: Arial;
-    font-weight: 400;
+    font-family: Barlow;
+    font-weight: 700;
     line-height:26px;
 }
 
