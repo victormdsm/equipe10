@@ -2,19 +2,18 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/assets/css/atlantis.css">
-    <link href="views/css/sidebar.css" rel="stylesheet" />
-    <link href="views/css/style.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Relatórios</title>
+    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+    <link href="views/css/sidebar.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-
-</head>
-
+    <link rel="stylesheet" href="views/css/navbar-style.css">
+    <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
 <body>
     <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -100,7 +99,6 @@
                                 <div class="table-responsive">
                                     <div id="add-row_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
                                         <div class="row">
-                                            <!-- Botão de dropdown para escolher o tipo de relatório -->
                                             <div class="btn-group">
                                                 <select class="form-select" aria-label="Default select example">
                                                     <option selected>Escolha o tipo de relatorio</option>
@@ -143,23 +141,18 @@
                 </div>
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
-                        // Verificar se o botão da linha 148 foi clicado
+                
                         const pesquisarBtn = document.querySelector('.btn.btn-primary[tabindex="-1"]');
                         const downloadPdfBtn = document.getElementById('downloadPdfBtn');
-                        const imgpdf = document.getElementById('imgpdf');
-
+                        const imgpdf = document.getElementById('imgpdf'); 
                         pesquisarBtn.addEventListener('click', function () {
-                            // Verificar alguma condição aqui, por exemplo, se os campos de data foram preenchidos
-                            // Vamos supor que você queira exibir o botão de download apenas se as datas estiverem preenchidas
                             const dataInicio = document.querySelector('input[type="date"][class="form-control col-md-4"]').value;
                             const dataFim = document.querySelector('input[type="date"][class="form-control col-md-4"]').value;
 
                             if (dataInicio && dataFim) {
-                                // Se as datas estiverem preenchidas, torne o botão de download visível
                                 downloadPdfBtn.classList.remove('d-none');
                                 imgpdf.classList.remove('d-none');
                             } else {
-                                // Caso contrário, mantenha o botão de download invisível
                                 downloadPdfBtn.classList.add('d-none');
                                 imgpdf.classList.add('d-none');
                             }
