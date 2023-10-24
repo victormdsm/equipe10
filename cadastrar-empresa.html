@@ -14,65 +14,56 @@
         <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-        <div class="container-fluid">
-            <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
-                    <div
-                        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                        <a href="dashboard.html"
-                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
-                        </a>
-                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                            id="menu">
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
-                            <li>
-                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span
-                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
-                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                    <li class="w-100">
-                                        <a href="cad-user.html" class="nav-link px-0 "> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span
-                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="dashboard.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="cad-user.html" class="nav-link px-0 "> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
+                                </li>
+                                <li>
+                                    <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
+                                </li>
+                            </ul>
+                        </li>   
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
                                 <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                    <li class="w-100">
-                                        <a href="Relatorios.html" class="nav-link px-0"> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="transaçoes.html" class="nav-link px-0"> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
-                                    </li>
-                                    <li>
-                                        <a href="registrar-transacao.html" class="nav-link px-0"> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="gerenciar-empresas.html" class="nav-link px-0"> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
-                                    </li>
-                                    <li>
-                                        <a href="cadastrar-empresa.html" class="nav-link px-0"> <span
-                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <hr>
+                                <li class="w-100">
+                                    <a href="Relatorios.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span> </a>
+                                </li>
+                                <li>
+                                    <a href="transaçoes.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
+                                </li>
+                                <li>
+                                    <a href="registrar-transacao.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span> </a>
+                                </li>
+                                <li>
+                                    <a href="gerenciar-empresas.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
+                                </li>
+                                <li>
+                                    <a href="cadastrar-empresa.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        
                         <div class="dropdown pb-4">
                             <a href="#"
                                 class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
@@ -92,112 +83,117 @@
                         </div>
                     </div>
                 </div>
-                <div class="col py-3">
-                    <h3 class="text-center pb-5">Cadastrar Empresa</h3>
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="inputname" class="form-label">Razão Social</label>
-                            <input type="text" class="form-control" id="inputname">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">CNPJ</label>
-                            <input type="number_format" class="form-control" id="cnpj">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress" class="form-label">Nome do Responsavel</label>
-                            <input type="text" class="form-control" id="inputAddress"
-                                placeholder="Digite o Nome Completo">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Endereço</label>
-                            <input type="text" class="form-control" id="inputAddress2"
-                                placeholder="rua, bairro, numero">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputCity" class="form-label">Cidade</label>
-                            <input type="text" class="form-control" id="cidade">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="inputState" class="form-label">Estado</label>
-                            <select id="estado" class="form-select">
-                                <option selected>Selecione seu estado</option>
-                                <option>Acre</option>
-                                <option>Alagoas</option>
-                                <option>Amapá</option>
-                                <option>Amazonas</option>
-                                <option>Bahia</option>
-                                <option>Ceará</option>
-                                <option>Distrito Federal</option>
-                                <option>Espírito Santo</option>
-                                <option>Goiás</option>
-                                <option>Maranhão</option>
-                                <option>Mato Grosso</option>
-                                <option>Mato Grosso do Sul</option>
-                                <option>Minas Gerais</option>
-                                <option>Pará</option>
-                                <option>Paraíba</option>
-                                <option>Paraná</option>
-                                <option>Pernambuco</option>
-                                <option>Piauí</option>
-                                <option>Rio de Janeiro</option>
-                                <option>Rio Grande do Norte</option>
-                                <option>Rio Grande do Sul</option>
-                                <option>Rondônia</option>
-                                <option>Roraima</option>
-                                <option>Santa Catarina</option>
-                                <option>São Paulo</option>
-                                <option>Sergipe</option>
-                                <option>Tocantins</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label class="form-label formfont " for="form6Example3">CEP</label>
-                            <input type="text" id="cep" class="form-control inputMargin" placeholder="CEP" />
-                        </div>
-                        <div class="col-12">
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        </div>
-                    </form>
-                </div>
+            </div>
+            <div class="col py-3">
+                <h3 class="text-center pb-5">Cadastrar Empresa</h3>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                      <label for="inputname" class="form-label">Razão Social</label>
+                      <input type="text" class="form-control" id="inputname">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">CNPJ</label>
+                      <input type="number_format" class="form-control" name="cnpj" id="cnpj">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Nome do Responsavel</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Digite o Nome Completo">
+                    </div>
+                    <div class="col-md-5">
+                      <label for="rua" class="form-label">Rua</label>
+                      <input type="text" name="rua" class="form-control" id="rua" placeholder="Rua:">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="numero" class="form-label">Número</label>
+                        <input type="text" class="form-control" id="numero" placeholder="Rua:">
+                      </div>
+                    <div class="col-md-5">
+                      <label for="cidade" class="form-label">Cidade</label>
+                      <input type="text" name="cidade" class="form-control" id="cidade">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Estado</label>
+                      <select id="estado" name="estado" class="form-select">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">CEP</label>
+                      <input type="text" name="cep" class="form-control" id="cep">
+                    </div>
+                    <div class="col-12">
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                  </form>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-    </body>
+    </div>
+    <script type="text/javascript">
 
-    <script>
-        $(document).ready(function () {
-            $('#cep').mask('00000-000');
-            $('#cpf').mask('000.000.000-00');
-            $('#telefone').mask('(00) 00000-0000');
-            $('#cnpj').mask('00.000.000/0000-00');
-        });
-        function validateCEP(cep) {
-            const cepRegex = /^[0-9]{5}\-[0-9]{3}$/;
-            return cepRegex.test(cep);
-        }
+     $(document).ready(function() {
+        $('#cep').mask('00000-000');
+        $('#cnpj').mask('00.000.000/0000-00');
+    });
 
-        const cepInput = document.getElementById("cep");
+    function validateCEP(cep) {
+    const cepRegex = /^[0-9]{5}\-[0-9]{3}$/;
+    return cepRegex.test(cep);
+    }
+    const cepInput = document.getElementById("cep");
 
-        cepInput.addEventListener("change", () => {
-            const cep = cepInput.value;
-            if (validateCEP(cep)) {
-                fetch(`https://viacep.com.br/ws/${cep}/json/`)
-                    .then(response => response.json())
-                    .then(data => {
-                        document.querySelector('#rua').value = data.logradouro;
-                        document.querySelector('#bairro').value = data.bairro;
-                        document.querySelector('#estado').value = data.uf;
-                        document.querySelector('#cidade').value = data.localidade;
-                    })
-                    .catch(error => console.error(error));
-            } else {
-                alert("CEP nulo ou inválido!");
-            }
-        });
+    cepInput.addEventListener("change", () => {
+    const cep = cepInput.value;
+    if (validateCEP(cep)) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector('#rua').value = data.logradouro;
+            document.querySelector('#bairro').value = data.bairro;
+            document.querySelector('#estado').value = data.uf;
+            document.querySelector('#cidade').value = data.localidade;
+        })
+        .catch(error => console.error(error));
+    } else {
+        alert("CEP nulo ou inválido!");
+    }
+    });
+
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>
