@@ -1,153 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
-    <link href="views/css/sidebar.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="views/css/navbar-style.css">
-    <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+        <link href="views/css/sidebar.css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="views/css/navbar-style.css">
+        <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
+    </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="dashboard.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
-                    </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                        
-                        <li>
-                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="cad-user.html" class="nav-link px-0 "> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
-                                </li>
-                                <li>
-                                    <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
-                                </li>
-                            </ul>
-                        </li>   
-                        <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="Relatorios.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span> </a>
-                                </li>
-                                <li>
-                                    <a href="transaçoes.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
-                                </li>
-                                <li>
-                                    <a href="registrar-transacao.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span> </a>
-                                </li>
-                                <li>
-                                    <a href="gerenciar-empresas.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
-                                </li>
-                                <li>
-                                    <a href="cadastrar-empresa.html" class="nav-link px-0"> <span class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr>
-                    <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">mamonha</span>
+    <body>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
+                    <div
+                        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <a href="dashboard.html"
+                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Configurações</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+
                             <li>
-                                <hr class="dropdown-divider">
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span
+                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="cad-user.html" class="nav-link px-0 "> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li><a class="login.html" href="#">Sign out</a></li>
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span
+                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="Relatorios.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="transaçoes.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="registrar-transacao.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="gerenciar-empresas.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="cadastrar-empresa.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
+                        <hr>
+                        <div class="dropdown pb-4">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+                                    alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <span class="d-none d-sm-inline mx-1">mamonha</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="login.html" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col py-3">
-                <h3 class="text-center pb-5">Cadastrar Empresa</h3>
-                <form class="row g-3">
-                    <div class="col-md-6">
-                      <label for="inputname" class="form-label">Razão Social</label>
-                      <input type="text" class="form-control" id="inputname">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="inputPassword4" class="form-label">Cnpj</label>
-                      <input type="number_format" class="form-control" id="inputPassword4">
-                    </div>
-                    <div class="col-12">
-                      <label for="inputAddress" class="form-label">Nome do Responsavel</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="Digite o Nome Completo">
-                    </div>
-                    <div class="col-12">
-                      <label for="inputAddress2" class="form-label">Endereço</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="rua, bairro, numero">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="inputCity" class="form-label">Cidade</label>
-                      <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-4">
-                      <label for="inputState" class="form-label">Estado</label>
-                      <select id="inputState" class="form-select">
-                        <option selected>Selecione seu estado</option>
-                        <option>Acre</option>
-                        <option>Alagoas</option>
-                        <option>Amapá</option>
-                        <option>Amazonas</option>
-                        <option>Bahia</option>
-                        <option>Ceará</option>
-                        <option>Distrito Federal</option>
-                        <option>Espírito Santo</option>
-                        <option>Goiás</option>
-                        <option>Maranhão</option>
-                        <option>Mato Grosso</option>
-                        <option>Mato Grosso do Sul</option>
-                        <option>Minas Gerais</option>
-                        <option>Pará</option>
-                        <option>Paraíba</option>
-                        <option>Paraná</option>
-                        <option>Pernambuco</option>
-                        <option>Piauí</option>
-                        <option>Rio de Janeiro</option>
-                        <option>Rio Grande do Norte</option>
-                        <option>Rio Grande do Sul</option>
-                        <option>Rondônia</option>
-                        <option>Roraima</option>
-                        <option>Santa Catarina</option>
-                        <option>São Paulo</option>
-                        <option>Sergipe</option>
-                        <option>Tocantins</option>
-                      </select>
-                    </div>
-                    <div class="col-md-2">
-                      <label for="inputZip" class="form-label">Cep</label>
-                      <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-12">
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    </div>
-                  </form>
+                <div class="col py-3">
+                    <h3 class="text-center pb-5">Cadastrar Empresa</h3>
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputname" class="form-label">Razão Social</label>
+                            <input type="text" class="form-control" id="inputname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">CNPJ</label>
+                            <input type="number_format" class="form-control" id="cnpj">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Nome do Responsavel</label>
+                            <input type="text" class="form-control" id="inputAddress"
+                                placeholder="Digite o Nome Completo">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress2"
+                                placeholder="rua, bairro, numero">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="cidade">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Estado</label>
+                            <select id="estado" class="form-select">
+                                <option selected>Selecione seu estado</option>
+                                <option>Acre</option>
+                                <option>Alagoas</option>
+                                <option>Amapá</option>
+                                <option>Amazonas</option>
+                                <option>Bahia</option>
+                                <option>Ceará</option>
+                                <option>Distrito Federal</option>
+                                <option>Espírito Santo</option>
+                                <option>Goiás</option>
+                                <option>Maranhão</option>
+                                <option>Mato Grosso</option>
+                                <option>Mato Grosso do Sul</option>
+                                <option>Minas Gerais</option>
+                                <option>Pará</option>
+                                <option>Paraíba</option>
+                                <option>Paraná</option>
+                                <option>Pernambuco</option>
+                                <option>Piauí</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Norte</option>
+                                <option>Rio Grande do Sul</option>
+                                <option>Rondônia</option>
+                                <option>Roraima</option>
+                                <option>Santa Catarina</option>
+                                <option>São Paulo</option>
+                                <option>Sergipe</option>
+                                <option>Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label formfont " for="form6Example3">CEP</label>
+                            <input type="text" id="cep" class="form-control inputMargin" placeholder="CEP" />
+                        </div>
+                        <div class="col-12">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    </body>
 
+    <script>
+        $(document).ready(function () {
+            $('#cep').mask('00000-000');
+            $('#cpf').mask('000.000.000-00');
+            $('#telefone').mask('(00) 00000-0000');
+            $('#cnpj').mask('00.000.000/0000-00');
+        });
+        function validateCEP(cep) {
+            const cepRegex = /^[0-9]{5}\-[0-9]{3}$/;
+            return cepRegex.test(cep);
+        }
+
+        const cepInput = document.getElementById("cep");
+
+        cepInput.addEventListener("change", () => {
+            const cep = cepInput.value;
+            if (validateCEP(cep)) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.querySelector('#rua').value = data.logradouro;
+                        document.querySelector('#bairro').value = data.bairro;
+                        document.querySelector('#estado').value = data.uf;
+                        document.querySelector('#cidade').value = data.localidade;
+                    })
+                    .catch(error => console.error(error));
+            } else {
+                alert("CEP nulo ou inválido!");
+            }
+        });
+    </script>
 
 </html>
