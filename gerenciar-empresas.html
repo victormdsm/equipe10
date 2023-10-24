@@ -1,466 +1,693 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
-    <link href="views/css/sidebar.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="views/css/navbar-style.css">
-    <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
+    <head>
+        <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+        <link href="views/css/sidebar.css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>gerenciar empresas</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="views/css/navbar-style.css">
 
 
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="dashboard.html"
-                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
-                    </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                        id="menu">
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
+    </head>
 
-                        <li>
-                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span
-                                    class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="cad-user.html" class="nav-link px-0 "> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
-                                </li>
-                                <li>
-                                    <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span
-                                    class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="Relatorios.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span> </a>
-                                </li>
-                                <li>
-                                    <a href="transaçoes.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
-                                </li>
-                                <li>
-                                    <a href="registrar-transacao.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span> </a>
-                                </li>
-                                <li>
-                                    <a href="gerenciar-empresas.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
-                                </li>
-                                <li>
-                                    <a href="cadastrar-empresa.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr>
-                    <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
-                                alt="hugenerd" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">mamonha</span>
+    <body>
+
+
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 corfundo">
+                    <div
+                        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <a href="dashboard.html"
+                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline fonteTexto">Mamonha System</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Configurações</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+
                             <li>
-                                <hr class="dropdown-divider">
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span
+                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="cad-user.html" class="nav-link px-0 "> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span
+                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="Relatorios.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="transaçoes.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="registrar-transacao.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="gerenciar-empresas.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="cadastrar-empresa.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
+                        <hr>
+                        <div class="dropdown pb-4">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+                                    alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <span class="d-none d-sm-inline mx-1">mamonha</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col py-3">
-                <div class="page-header">
-                    <h4 class="page-title">Empresas Cadastradas</h4>
-                    <hr>
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Lista de Empresas</h6>
+                <div class="col py-3">
+                    <div class="page-header">
+                        <h4 class="page-title">Empresas Cadastradas</h4>
+                        <hr>
+                        <div class="card shadow mb-4">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Empresas</th>
+                                                <th scope="col">CNPJ</th>
+                                                <th scope="col" class="text-center">Ação</th>
+                                            </tr>
+                                        <tbody>
+                                            <tr id="row1" data-id="empresa1">
+                                                <th>1</th>
+                                                <td>Andreia e Eloá Alimentos ME</td>
+                                                <td>41.147.968/0001-22</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row1');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row2" data-id="empresa2">
+                                                <th>2</th>
+                                                <td>Theo e Olivia Contábil ME</td>
+                                                <td>76.954.021/0001-08</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row2');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row3" data-id="empresa3">
+                                                <th>3</th>
+                                                <td>Otávio e Jennifer Locações de Automóveis Ltda</td>
+                                                <td id="cnpj3">64.151.532/0001-02</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row3');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row4" data-id="empresa4">
+                                                <th>4</th>
+                                                <td>Fábio e Levi Padaria Ltda</td>
+                                                <td id="cnpj4">65.050.437/0001-85</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row4');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row5" data-id="empresa5">
+                                                <td>5</td>
+                                                <td>Fábio e Jennifer Marcenaria ME</td>
+                                                <td id="cnpj1">98.336.741/0001-42</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row5');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row6" data-id="empresa6">
+                                                <td>6</td>
+                                                <td>Vitória e Sandra Transportes ME</td>
+                                                <td id="cnpj2">26.601.121/0001-82</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row6');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row7" data-id="empresa7">
+                                                <td>7</td>
+                                                <td>Vera e Jorge Restaurante Ltda</td>
+                                                <td id="cnpj3">32.779.375/0001-98</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row7');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row8" data-id="empresa8">
+                                                <td>8</td>
+                                                <td>Pedro Henrique e Nelson Esportes Ltda</td>
+                                                <td id="cnpj4">99.755.444/0001-02</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row8');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row9" data-id="empresa9">
+                                                <td>9</td>
+                                                <td>Edson e Bianca Entulhos Ltda</td>
+                                                <td id="cnpj9">55.485.578/0001-77</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row9');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row10" data-id="empresa10">
+                                                <td>10</td>
+                                                <td>Pedro e Anthony Eletrônica ME</td>
+                                                <td id="cnpj6">90.061.600/0001-52</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row10');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row11" data-id="empresa11">
+                                                <td>11</td>
+                                                <td>Miguel e Osvaldo Pizzaria Delivery ME</td>
+                                                <td id="cnpj7">41.875.625/0001-84</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row11');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row12" data-id="empresa12">
+                                                <td>12</td>
+                                                <td>Gabrielly e Antônia Marcenaria ME</td>
+                                                <td id="cnpj8">40.456.884/0001-08</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row12');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row13" data-id="empresa13">
+                                                <td>13</td>
+                                                <td>Nina e Thales Mudanças ME</td>
+                                                <td id="cnpj9">08.069.315/0001-05</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row13');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row14" data-id="empresa14">
+                                                <td>14</td>
+                                                <td>Catarina e Catarina Marcenaria Ltda</td>
+                                                <td id="cnpj10">07.996.197/0001-00</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row14');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row15" data-id="empresa15">
+                                                <td>15</td>
+                                                <td>Rosa e Filipe Doces & Salgados ME</td>
+                                                <td id="cnpj11">60.895.432/0001-30</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row15');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row16" data-id="empresa16">
+                                                <td>16</td>
+                                                <td>Lucas e Isadora Construções Ltda</td>
+                                                <td id="cnpj12">19.345.135/0001-17</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row16');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row17" data-id="empresa17">
+                                                <td>17</td>
+                                                <td>Márcio e Cauã Joalheria ME</td>
+                                                <td id="cnpj13">60.044.939/0001-80/td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row17');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row18" data-id="empresa18">
+                                                <td>18</td>
+                                                <td>Severino e Renato Contábil ME</td>
+                                                <td id="cnpj14">76.037.760/0001-35</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row18');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row19" data-id="empresa19">
+                                                <td>19</td>
+                                                <td>Silvana e Yuri Ferragens ME</td>
+                                                <td id="cnpj15">73.902.154/0001-42</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row19');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row20" data-id="empresa20">
+                                                <td>20</td>
+                                                <td>Kevin e Leonardo Lavanderia ME</td>
+                                                <td id="cnpj16">66.687.120/0001-17</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row20');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row21" data-id="empresa21">
+                                                <td>21</td>
+                                                <td>Anthony e Alexandre Pizzaria Delivery ME</td>
+                                                <td id="cnpj17">29.289.133/0001-01</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row21');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row22" data-id="empresa22">
+                                                <td>22</td>
+                                                <td>Olivia e Bruno Marketing Ltda</td>
+                                                <td id="cnpj18">16.914.051/0001-69</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row22');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row23" data-id="empresa23">
+                                                <td>23</td>
+                                                <td>Pietro e Lucca Filmagens Ltda</td>
+                                                <td id="cnpj19">79.741.341/0001-78</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-toggle="modal"
+                                                            data-target="#modalAnotacao">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row23');">
+                                                            <i class="fas fa-times" style="color: blue;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="row24" data-id="empresa24">
+                                                <td>24</td>
+                                                <td>Enzo e Luna Esportes ME</td>
+                                                <td id="cnpj20">72.452.939/0001-06</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" data-bs-toggle="modal"
+                                                            data-target="#modal-2">
+                                                            <i class="fas fa-pen-to-square" style="color: blue;"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-sm px-3"
+                                                            data-ripple-color="dark" onclick="removeEmpresa('row24');">
+                                                            <i class="fas fa-times" style="color: red;"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>CNPJ</th>
-                                            <th>Telefone</th>
-                                            <th>Ação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Empresa A</td>
-                                            <td>12345678901</td>
-                                            <td>(123) 456-7890</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa B</td>
-                                            <td>23456789012</td>
-                                            <td>(234) 567-8901</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa C</td>
-                                            <td>34567890123</td>
-                                            <td>(345) 678-9012</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Empresa D</td>
-                                            <td>45678901234</td>
-                                            <td>(456) 789-0123</td>
-                                            <td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-primary btn-lg"
-                                                        data-original-title="Edit Task" data-bs-toggle="modal"
-                                                        data-bs-target="#modal-2">
-                                                        <i class="fa bi-pencil-square"></i>
-                                                    </button>
-                                                    <button type="button" data-toggle="tooltip" title=""
-                                                        class="btn btn-link btn-danger" data-original-title="Remove"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-1">
-                                                        <i class="fa bi-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    </div>
+                </div>
+                <!-- Modal Para anotações -->
+                <div class="modal fade" id="modalAnotacao" tabindex="-1" role="dialog"
+                    aria-labelledby="modalAnotacaoLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalAnotacaoLabel">Anotação de Exclusão</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Formulário para a anotação -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="motivoReprovacao">Motivo da Exclusão</label>
+                                        <textarea class="form-control" id="motivoReprovacao" rows="3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-danger"
+                                    data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success">Salvar e Excluir</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </div>
-        <!-- MODAL 1 -->
-        <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Voce tem certeza disso?!</b></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <h2><b>Voce tem certeza que gostaria de deletar empresa X?</b></h2>
+                <!-- MODAL 2 -->
+                <div class="modal fade2" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Alterar Dados!</b></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="InputEmail" class="form-label">CNPJ</label>
+                                    <input type="text" name="cnpj" id="cnpjInput" class="form-control">
+                                    <label for="InputEmail" class="form-label">Razao Social</label>
+                                    <input type="text" name="cnpj" id="cnpjInput" class="form-control">
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Excluir!</button>
-
-                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- MODAL 2 -->
-        <div class="modal fade2" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Alterar Dados!</b></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="InputEmail" class="form-label">CNPJ</label>
-                            <input type="text" name="cnpj" id="cnpjInput" class="form-control">
-                            <label for="InputAddres1" class="form-label">Endereço</label>
-                            <input type="text" name="endereço" id="endInput" class="form-control">
-                            <label for="InputRSocial" class="form-label">Razão Social</label>
-                            <input type="text" name="razao social" id="rsInput" class="form-control">
-                            <label class="form-label" for="phone">telefone</label>
-                            <input type="text" id="phone" class="form-control" data-mask="(00) 00000-0000"
-                                data-mask-selectonfocus="true" />
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        <!-- Chart JS -->
-        <script src="../assets/js/plugin/chart.js/chart.min.js"></script>
 
-        <!-- jQuery Sparkline -->
-        <script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-        <!-- Chart Circle -->
-        <script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+                <!-- Chart JS -->
+                <script src="../assets/js/plugin/chart.js/chart.min.js"></script>
 
-        <!-- Datatables -->
-        <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+                <!-- jQuery Sparkline -->
+                <script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-        <!-- Bootstrap Notify -->
-        <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+                <!-- Chart Circle -->
+                <script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
 
-        <!-- jQuery Vector Maps -->
-        <script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-        <script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+                <!-- Datatables -->
+                <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
 
-        <!-- Sweet Alert -->
-        <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+                <!-- Bootstrap Notify -->
+                <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-        <!-- Atlantis JS -->
-        <script src="../assets/js/atlantis.min.js"></script>
+                <!-- jQuery Vector Maps -->
+                <script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+                <script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
 
-         <!-- Bootstrap core JavaScript-->
-         <script src="vendor/jquery/jquery.min.js"></script>
-         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-     
-         <!-- Core plugin JavaScript-->
-         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-     
-         <!-- Custom scripts for all pages-->
-         <script src="js/sb-admin-2.min.js"></script>
-     
-         <!-- Page level plugins -->
-         <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-         <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-     
-         <!-- Page level custom scripts -->
-         <script src="js/demo/datatables-demo.js"></script>
- 
+                <!-- Sweet Alert -->
+                <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+                <!-- Atlantis JS -->
+                <script src="../assets/js/atlantis.min.js"></script>
+
+                <!-- Bootstrap core JavaScript-->
+                <script src="vendor/jquery/jquery.min.js"></script>
+                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Core plugin JavaScript-->
+                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+                <!-- Custom scripts for all pages-->
+                <script src="js/sb-admin-2.min.js"></script>
+
+                <!-- Page level plugins -->
+                <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+                <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+                <!-- Page level custom scripts -->
+                <script src="js/demo/datatables-demo.js"></script>
 
 
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-</body>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                    crossorigin="anonymous"></script>
+
+                <script>
+                    function exibirModalConfirmacao(button) {
+                        var empresaId = button.getAttribute("data-id");
+                        // Agora você pode usar o `empresaId` para personalizar o conteúdo do modal, se necessário
+                        // Exibir o modal
+                        var modal = new bootstrap.Modal(document.getElementById("modalAnotacao"));
+                        modal.show();
+                    }
+
+                    function removeEmpresa(rowId) {
+                        // Confirme a exclusão com o usuário
+                        if (confirm("Tem certeza de que deseja excluir esta empresa?")) {
+                            // Feche o modal
+                            var modal = new bootstrap.Modal(document.getElementById("modalAnotacao"));
+                            modal.hide();
+
+                            // Remova a linha da tabela
+                            var row = document.getElementById(rowId);
+                            if (row) {
+                                row.remove();
+                            }
+                        }
+                    }
+                </script>
+    </body>
 
 
 </html>

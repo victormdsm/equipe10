@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
-    <link href="views/css/sidebar.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="views/css/navbar-style.css">
-    <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <link rel="shortcut icon" href="assets/mamonha big.png" type="image/x-icon" />
+        <link href="views/css/sidebar.css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="views/css/navbar-style.css">
+        <script src="https://kit.fontawesome.com/d81ada1347.js" crossorigin="anonymous"></script>
+    </head>
 
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -67,14 +67,72 @@
                             <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="hugenerd" width="30" height="30" class="rounded-circle">
                             <span class="d-none d-sm-inline mx-1">mamonha</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Configurações</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+
                             <li>
-                                <hr class="dropdown-divider">
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi bi-people fonteSubtitulo"></i> <span
+                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Usuarios</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="cad-user.html" class="nav-link px-0 "> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Usuarios</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="gerenciar-usuarios.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Gerenciar Usuarios</span> </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li><a class="login.html" href="#">Sign out</a></li>
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi bi-building-gear fonteSubtitulo"></i> <span
+                                        class="ms-1 d-none d-sm-inline fonteSubtitulo">Empresa</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="Relatorios.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Relatórios Financeiros</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="transaçoes.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Transações</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="registrar-transacao.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Registrar Transações</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="gerenciar-empresas.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Consultar Dados</span> </a>
+                                    </li>
+                                    <li>
+                                        <a href="cadastrar-empresa.html" class="nav-link px-0"> <span
+                                                class="d-none d-sm-inline fonteSubtitulo">Cadastrar Empresa</span> </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
+                        <hr>
+                        <div class="dropdown pb-4">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://steamuserimages-a.akamaihd.net/ugc/947344160519299166/AE0675171164D5E6D3CB13B9D5190A26F30DB5D5/?imw=500&imh=406&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+                                    alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <span class="d-none d-sm-inline mx-1">mamonha</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="login.html" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
